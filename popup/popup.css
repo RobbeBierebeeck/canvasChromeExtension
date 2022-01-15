@@ -1,11 +1,129 @@
 body {
-    background-color: #222;
-    color: #eee;
-
+    background: rgba(2, 14, 39);
+    backdrop-filter: blur(40px);
+    border-radius: 20px;
     width: 16rem;
-    height: 4rem;
+    height: 34rem;
+    color:white;
 }
-
+.isActif{
+    border-style: solid;
+    border-color: #FFC600;
+    border-width: 4px;
+    border-radius: 8px;
+}
+.title{
+    font-size: 1.6em;
+    margin-left: 1rem;
+}
 .special-text {
     color: red;
 }
+
+.theme{
+    width: 14rem;
+    height: 9rem;
+    border-radius: 4px;
+}
+.themeNormal{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 0;
+}
+
+.content{
+    
+    position: absolute;
+    width: 14rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 9rem;
+    overflow: hidden;
+}
+.darkTheme{
+    top: 17em;
+}
+.colorFullTheme{
+    top: 31em;
+}
+.content-overlay{
+    z-index: 1;
+    background: rgba(0,0,0,0.7);
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 0;
+    opacity: 0;
+    width: 14rem;
+    height: 9rem;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+}
+.content:hover .content-overlay{
+    opacity:1;
+}
+
+.content-details {
+    z-index: 1;
+    width: 14rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.content:hover .content-details{
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+  }
+  
+  .fadeIn-bottom{
+    top: 80%;
+  }
+  .button{
+      cursor: pointer;
+      position: relative;
+    padding: 20px 25px 20px 20px;
+    width: 8em;
+    border-width: 1px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 40px;
+    overflow:hidden;
+    font-size: 1em;
+font-weight: bold;
+  }
+  .button::after{
+    content:'';
+    display:inline-block;
+    transform:translateY(50%);
+    left:-15%;
+    position:absolute;
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    background-color: #1c1c1c;
+    z-index:-1;
+    transition: transform ease 1s;
+  }
+  .button:hover::after{
+    transform:translateY(-45%);
+  }
+  
