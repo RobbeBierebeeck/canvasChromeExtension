@@ -10,10 +10,10 @@
     },
     "options_page": "settings/settings.html",
     "action": {
-        "default_title": "Chrome Addon v3 Starter",
+        "default_title": "you can choose your theme here 🤙🏼",
         "default_popup": "popup/popup.html"
     },
-    "permissions": [],
+    "permissions": ["tabs"],
     "host_permissions": [
         "*://*/*"
     ],
